@@ -5,7 +5,7 @@ const userAge = parseInt( prompt ('Quanti anni hai?') );
 const ticketPrice = userDistance * 0.21;
 const ticketUnderAge = ticketPrice - ( (ticketPrice * 20) / 100);
 const ticketElderly = ticketPrice - ( (ticketPrice * 40) / 100);
-console.log(userDistance, userAge, ticketPrice);
+console.log(userDistance, userAge, ticketPrice, ticketUnderAge, ticketElderly);
 
 // Document
 document.getElementById('user-distance').innerHTML = userDistance;

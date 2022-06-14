@@ -2,10 +2,9 @@
 // Variabili
 let userDistance = parseInt( prompt ('Quanti Kilometri intendi percorrere?') );
 const userAge = parseInt( prompt ('Quanti anni hai?') );
-const ticketPrice = userDistance * 0.21;
-const ticketUnderAge = ticketPrice - ( (ticketPrice * 20) / 100);
-const ticketElderly = ticketPrice - ( (ticketPrice * 40) / 100);
-console.log(userDistance, userAge, ticketPrice, ticketUnderAge, ticketElderly);
+let ticketPrice = userDistance * 0.21;
+
+console.log(userDistance, userAge, ticketPrice);
 
 // Document
 document.getElementById('user-distance').innerHTML = userDistance;
@@ -23,10 +22,10 @@ if ( isNaN(userDistance) == true ) {
 } else {
 
     if (userAge < 18) {
-        document.getElementById('ticket-price').innerHTML = ( ticketUnderAge.toFixed( 2 ) );
+        document.getElementById('ticket-price').innerHTML = (ticketPrice - ( (ticketPrice * 20) / 100) ).toFixed( 2 );
         
         
     } else if (userAge > 65) {
-        document.getElementById('ticket-price').innerHTML =( ticketElderly.toFixed( 2 ) );
+        document.getElementById('ticket-price').innerHTML = (ticketPrice - ( (ticketPrice * 40) / 100) ).toFixed( 2 );
     }
 }    

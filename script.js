@@ -23,9 +23,10 @@ if ( isNaN(userDistance) == true ) {
 } else {
 
     if (userAge < 18) {
-        document.getElementById('ticket-price').innerHTML = ticketUnderAge;
+        document.getElementById('ticket-price').innerHTML = ( ticketUnderAge.toFixed( 2 ) );
+        
         
     } else if (userAge > 65) {
-        document.getElementById('ticket-price').innerHTML = ticketElderly;
+        document.getElementById('ticket-price').innerHTML =( ticketElderly.toFixed( 2 ) );
     }
 }    

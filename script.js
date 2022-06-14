@@ -9,7 +9,7 @@ console.log(userDistance, userAge, ticketPrice);
 // Document
 document.getElementById('user-distance').innerHTML = userDistance;
 document.getElementById('user-age').innerHTML = userAge;
-document.getElementById('ticket-price').innerHTML = ticketPrice;
+
 
 // Conditions
 
@@ -22,10 +22,12 @@ if ( isNaN(userDistance) == true ) {
 } else {
 
     if (userAge < 18) {
-        document.getElementById('ticket-price').innerHTML = (ticketPrice - ( (ticketPrice * 20) / 100) ).toFixed( 2 );
+        ticketPrice = (ticketPrice - ( (ticketPrice * 20) / 100) ).toFixed( 2 );
         
         
     } else if (userAge > 65) {
-        document.getElementById('ticket-price').innerHTML = (ticketPrice - ( (ticketPrice * 40) / 100) ).toFixed( 2 );
+        ticketPrice = (ticketPrice - ( (ticketPrice * 40) / 100) ).toFixed( 2 );
     }
 }    
+
+document.getElementById('ticket-price').innerHTML = ticketPrice;
